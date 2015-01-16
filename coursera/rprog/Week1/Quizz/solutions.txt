@@ -1,0 +1,303 @@
+
+R version 3.1.2 (2014-10-31) -- "Pumpkin Helmet"
+Copyright (C) 2014 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R -- это свободное ѕќ, и оно поставл€етс€ безо вс€ких гарантий.
+¬ы вольны распростран€ть его при соблюдении некоторых условий.
+¬ведите 'license()' дл€ получени€ более подробной информации.
+
+R -- это проект, в котором сотрудничает множество разработчиков.
+¬ведите 'contributors()' дл€ получени€ дополнительной информации и
+'citation()' дл€ ознакомлени€ с правилами упоминани€ R и его пакетов
+в публикаци€х.
+
+¬ведите 'demo()' дл€ запуска демонстрационных программ, 'help()' -- дл€
+получени€ справки, 'help.start()' -- дл€ доступа к справке через браузер.
+¬ведите 'q()', чтобы выйти из R.
+
+> dir()
+[1] "1.txt"        "hw1_data.csv"
+> #In the dataset provided for this Quiz, what are the column names of the dataset?
+> data<-read.csv("hw1_data.csv")
+> names(data)
+[1] "Ozone"   "Solar.R" "Wind"    "Temp"    "Month"   "Day"    
+> data[1:2]
+    Ozone Solar.R
+1      41     190
+2      36     118
+3      12     149
+4      18     313
+5      NA      NA
+6      28      NA
+7      23     299
+8      19      99
+9       8      19
+10     NA     194
+11      7      NA
+12     16     256
+13     11     290
+14     14     274
+15     18      65
+16     14     334
+17     34     307
+18      6      78
+19     30     322
+20     11      44
+21      1       8
+22     11     320
+23      4      25
+24     32      92
+25     NA      66
+26     NA     266
+27     NA      NA
+28     23      13
+29     45     252
+30    115     223
+31     37     279
+32     NA     286
+33     NA     287
+34     NA     242
+35     NA     186
+36     NA     220
+37     NA     264
+38     29     127
+39     NA     273
+40     71     291
+41     39     323
+42     NA     259
+43     NA     250
+44     23     148
+45     NA     332
+46     NA     322
+47     21     191
+48     37     284
+49     20      37
+50     12     120
+51     13     137
+52     NA     150
+53     NA      59
+54     NA      91
+55     NA     250
+56     NA     135
+57     NA     127
+58     NA      47
+59     NA      98
+60     NA      31
+61     NA     138
+62    135     269
+63     49     248
+64     32     236
+65     NA     101
+66     64     175
+67     40     314
+68     77     276
+69     97     267
+70     97     272
+71     85     175
+72     NA     139
+73     10     264
+74     27     175
+75     NA     291
+76      7      48
+77     48     260
+78     35     274
+79     61     285
+80     79     187
+81     63     220
+82     16       7
+83     NA     258
+84     NA     295
+85     80     294
+86    108     223
+87     20      81
+88     52      82
+89     82     213
+90     50     275
+91     64     253
+92     59     254
+93     39      83
+94      9      24
+95     16      77
+96     78      NA
+97     35      NA
+98     66      NA
+99    122     255
+100    89     229
+101   110     207
+102    NA     222
+103    NA     137
+104    44     192
+105    28     273
+106    65     157
+107    NA      64
+108    22      71
+109    59      51
+110    23     115
+111    31     244
+112    44     190
+113    21     259
+114     9      36
+115    NA     255
+116    45     212
+117   168     238
+118    73     215
+119    NA     153
+120    76     203
+121   118     225
+122    84     237
+123    85     188
+124    96     167
+125    78     197
+126    73     183
+127    91     189
+128    47      95
+129    32      92
+130    20     252
+131    23     220
+132    21     230
+133    24     259
+134    44     236
+135    21     259
+136    28     238
+137     9      24
+138    13     112
+139    46     237
+140    18     224
+141    13      27
+142    24     238
+143    16     201
+144    13     238
+145    23      14
+146    36     139
+147     7      49
+148    14      20
+149    30     193
+150    NA     145
+151    14     191
+152    18     131
+153    20     223
+> #Extract the first 2 rows of the data frame and print them to the console. What does the output look like?
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> #Extract the first 2 rows of the data frame and print them to the console. What does the output look like?
+> data[1:2,1:ncol(data)]
+  Ozone Solar.R Wind Temp Month Day
+1    41     190  7.4   67     5   1
+2    36     118  8.0   72     5   2
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> #How many observations (i.e. rows) are in this data frame?
+> nrow(data)
+[1] 153
+> 
+> 
+> 
+> 
+> #Extract the last 2 rows of the data frame and print them to the console. What does the output look like?
+> tail(data)
+    Ozone Solar.R Wind Temp Month Day
+148    14      20 16.6   63     9  25
+149    30     193  6.9   70     9  26
+150    NA     145 13.2   77     9  27
+151    14     191 14.3   75     9  28
+152    18     131  8.0   76     9  29
+153    20     223 11.5   68     9  30
+> tail(data, n=2)
+    Ozone Solar.R Wind Temp Month Day
+152    18     131  8.0   76     9  29
+153    20     223 11.5   68     9  30
+> 
+> 
+> 
+> #What is the value of Ozone in the 47th row?
+> data$Ozone[47]
+[1] 21
+> 
+> 
+> 
+> 
+> #How many missing values are in the Ozone column of this data frame?
+> length(data$Ozone[is.na(data$Ozone)])
+[1] 37
+> 
+> 
+> 
+> #What is the mean of the Ozone column in this dataset? Exclude missing values (coded as NA) from this calculation.
+>  mean(data$Ozone[!is.na(data$Ozone)])
+[1] 42.12931
+> 
+> 
+> 
+> 
+> #Extract the subset of rows of the data frame where Ozone values are above 31 and Temp values are above 90. What is the mean of Solar.R in this subset?
+> data[data$Ozone>31 & data$Temp>90, 1:ncol(data)]
+     Ozone Solar.R Wind Temp Month Day
+NA      NA      NA   NA   NA    NA  NA
+NA.1    NA      NA   NA   NA    NA  NA
+69      97     267  6.3   92     7   8
+70      97     272  5.7   92     7   9
+NA.2    NA      NA   NA   NA    NA  NA
+NA.3    NA      NA   NA   NA    NA  NA
+120     76     203  9.7   97     8  28
+121    118     225  2.3   94     8  29
+122     84     237  6.3   96     8  30
+123     85     188  6.3   94     8  31
+124     96     167  6.9   91     9   1
+125     78     197  5.1   92     9   2
+126     73     183  2.8   93     9   3
+127     91     189  4.6   93     9   4
+> solars<-data$Solar.R[data$Ozone>31 & data$Temp>90]
+> solars
+ [1]  NA  NA 267 272  NA  NA 203 225 237 188 167 197 183 189
+> solars[!is.na(solars)]
+ [1] 267 272 203 225 237 188 167 197 183 189
+> mean(solars[!is.na(solars)])
+[1] 212.8
+> 
+> 
+> 
+> 
+> 
+> #What is the mean of "Temp" when "Month" is equal to 6? 
+> data$Temp[data$Temp==6]
+integer(0)
+> data$Temp[data$Month==6]
+ [1] 78 74 67 84 85 79 82 87 90 87 93 92 82 80 79 77 72 65 73 76 77 76 76 76 75 78 73 80 77 83
+> mean(data$Temp[data$Month==6])
+[1] 79.1
+> 
+> 
+> 
+> 
+> #What was the maximum ozone value in the month of May (i.e. Month = 5)?
+> ozones <- data$Ozone[data$Month==5]
+> ozones
+ [1]  41  36  12  18  NA  28  23  19   8  NA   7  16  11  14  18  14  34   6  30  11   1  11   4  32  NA  NA  NA  23  45 115  37
+> ozones <- ozones[!is.na(ozones)]
+> ozones
+ [1]  41  36  12  18  28  23  19   8   7  16  11  14  18  14  34   6  30  11   1  11   4  32  23  45 115  37
+> max(ozones)
+[1] 115
+> 
