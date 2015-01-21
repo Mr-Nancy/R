@@ -17,19 +17,22 @@ pollutantmean <- function(directory, pollutant, id = 1:332) {
   tables <- lapply(files, read.csv)
   data <- do.call(rbind, tables)
   
-    # Get the Pollutant vector
-  pol_vec_full <- data[[pollutant]]
+  # Get the Pollutant vector
+  #pol_vec_full <- data[[pollutant]]
   
-  #Get the range
-  pol_vec_range <- pol_vec_full[id[1]:id[length(id)]]
+  #Get data with ID range
+  #id_range <- data[data$ID >= id[1] & data$ID <= id[10],]
+  id_range <- data[data$ID == seq_along(id),]
+  
+  #Get pollution vector
+  #pol_vec <- id_range[[pollutant]]
   
   
   #Clean out from NA
-  pol_vec_clean <- pol_vec_range[!is.na(pol_vec_range)]
-  
-  
+  #pol_vec <- pol_vec[!is.na(pol_vec)]
+    
   #MEAN
-  mean(pol_vec_clean)
+  #mean(pol_vec)
 
 }
 
